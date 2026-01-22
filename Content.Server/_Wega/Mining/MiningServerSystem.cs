@@ -101,7 +101,6 @@ public sealed class MiningServerSystem : EntitySystem
                     consumer.DrawRate = 0f;
                 UpdateAppearance(uid, server);
                 _ambient.SetAmbience(uid, false);
-                server.IsBroken = true;
             }
         }
     }
