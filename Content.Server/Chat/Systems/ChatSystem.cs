@@ -1089,7 +1089,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
-    private void SendInVoiceRange(
+    public void SendInVoiceRange( // LP edit
         ChatChannel channel,
         string name,
         string message,
@@ -1100,7 +1100,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         ChatTransmitRange range,
         NetUserId? author = null,
         LanguagePrototype? languageOverride = null, // Einstein Engines - Language
-        bool checkLOS = false // Floofstation - Check Line-Of-Sight
+        bool checkLOS = false, // Floofstation - Check Line-Of-Sight
+        Color? color = null // LP edit
         )
     {
         var language = languageOverride ?? _language.GetLanguage(source); // Einstein Engines - Language
@@ -1131,9 +1132,9 @@ public sealed partial class ChatSystem : SharedChatSystem
 
             // If the channel does not support languages, or the entity can understand the message, send the original message, otherwise send the obfuscated version
             if (channel == ChatChannel.LOOC || channel == ChatChannel.Emotes || _language.CanUnderstand(listener, language.ID))
-                _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author);
+                _chatManager.ChatMessageToOne(channel, message, wrappedMessage, source, entHideChat, session.Channel, author: author, colorOverride: color); // LP edit
             else
-                _chatManager.ChatMessageToOne(channel, obfuscated, obfuscatedWrappedMessage, source, entHideChat, session.Channel, author: author);
+                _chatManager.ChatMessageToOne(channel, obfuscated, obfuscatedWrappedMessage, source, entHideChat, session.Channel, author: author, colorOverride: color); // LP edit
             // Einstein Engines - Language end
         }
 
