@@ -17,15 +17,5 @@ alerts-modsuit-power-desc = Показывает текущий уровень �
 alerts-centered-name = В равновесии
 alerts-centered-desc = Вы чувствуете связь с вашими корнями. В частности с теми, что удерживают вас в центре плитки.
 
-### Pain Alerts
-
-alerts-minor-pain-name = Лёгкая боль
-alerts-minor-pain-desc = Вы чувствуете лёгкую боль.
-alerts-moderate-pain-name = [color=yellow]Умеренная боль[/color]
-alerts-moderate-pain-desc = [color=yellow]Боль заметна и отвлекает.[/color]
-alerts-severe-pain-name = [color=red]Сильная боль[/color]
-alerts-severe-pain-desc = [color=red]Боль сильная и её трудно игнорировать.[/color]
-alerts-excruciating-pain-name = [color=red]Мучительная боль[/color]
-alerts-excruciating-pain-desc = [color=red]Боль невыносима и мешает вам сосредоточиться на чём-либо ещё.[/color]
 alerts-disgust-name = [color=yellow]Отвращение[/color]
 alerts-disgust-desc = Вам не очень хорошо...
