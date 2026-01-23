@@ -57,7 +57,7 @@
             </BoxContainer>
         </BoxContainer>
 
-        <customControls:HSeparator StyleClasses="LowDivider" Margin="0 0 0 10"/>\
+        <customControls:HSeparator StyleClasses="LowDivider" Margin="0 0 0 10"/>
 
         <BoxContainer Orientation="Vertical" VerticalExpand="False" Margin="10">
             <controls:StripeBack>
